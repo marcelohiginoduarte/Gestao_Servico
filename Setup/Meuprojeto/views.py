@@ -74,3 +74,9 @@ def CadastroEquipes(request):
 
         equipe.save()
         return render(request, 'Cadastroequipes.html')
+    
+
+def VisualizarServicos(request):
+    visualizar_servicos = Servico.objects.all()
+    print(visualizar_servicos)
+    return render(request, 'Visualizar.html',)

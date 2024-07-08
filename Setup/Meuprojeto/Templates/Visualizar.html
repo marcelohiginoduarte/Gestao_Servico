@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block 'titulo' %}Visualizar Serviços{% endblock %}
+
+{% block 'Material' %}
+
+<h1>Os Serviços são</h1>
+<hr>
+<br>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Projeto</th>
+      <th scope="col">nota</th>
+      <th scope="col">status</th>
+      <th scope="col">Descricao</th>
+      <th scope="col">Local</th>
+      <th scope="col">Data_Inicio</th>
+      <th scope="col">Data_Fim</th>
+      <th scope="col">Data_Programacao</th>
+      <th scope="col">Equipe</th>
+      <th scope="col">valor_inicial</th>
+      <th scope="col">valor_final</th>
+    </tr>
+  </thead>
+  <tbody>
+      {% for servicos in Servico %}
+      <tr>
+        <td>{{servicos.Projeto}}</td>
+        <td>{{servicos.nota}}</td>
+        <td>{{servicos.status}}</td>
+        <td>{{servicos.Descricao}}</td>
+        <td>{{servicos.Local}}</td>
+        <td>{{servicos.Data_Inicio}}</td>
+        <td>{{servicos.Data_Fim}}</td>
+        <td>{{servicos.Data_Programacao}}</td>
+        <td>{{servicos.Equipe}}</td>
+        <td>{{servicos.valor_inicial}}</td>
+        <td>{{servicos.valor_final}}</td>
+      </tr>
+      {% endfor %}
+  </tbody>
+</div>
+</table>
+
+{% endblock %}
