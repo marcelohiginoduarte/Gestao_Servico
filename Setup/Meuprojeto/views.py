@@ -22,8 +22,9 @@ def CadastrarServico(request):
         valor_inicial = request.POST.get('valor_inicial')
         valor_final = request.POST.get('valor_final')
 
-        if len(Projeto) <= 8:
+        if len(Projeto) <=7:
             return redirect('/cadastroservico/?erro=1&texto=Digite um projeto valido')
+        
 
         servico = Servico(
             Projeto = Projeto,
