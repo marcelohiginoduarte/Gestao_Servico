@@ -23,20 +23,20 @@
     </tr>
   </thead>
   <tbody>
-      {% for servicos in Servico %}
-      <tr>
-        <td>{{servicos.Projeto}}</td>
-        <td>{{servicos.nota}}</td>
-        <td>{{servicos.status}}</td>
-        <td>{{servicos.Descricao}}</td>
-        <td>{{servicos.Local}}</td>
-        <td>{{servicos.Data_Inicio}}</td>
-        <td>{{servicos.Data_Fim}}</td>
-        <td>{{servicos.Data_Programacao}}</td>
-        <td>{{servicos.Equipe}}</td>
-        <td>{{servicos.valor_inicial}}</td>
-        <td>{{servicos.valor_final}}</td>
-      </tr>
+      {% for Servico in visualizar_servicos %}
+        <tr>
+          <td>{{Servico.Projeto}}</td>
+          <td>{{Servico.Nota}}</td>
+          <td>{{Servico.Status}}</td>
+          <td>{{Servico.Descricao}}</td>
+          <td>{{Servico.Local}}</td>
+          <td>{{Servico.Data_Inicio}}</td>
+          <td>{{Servico.Data_Fim}}</td>
+          <td>{{Servico.Data_Programacao}}</td>
+          <td>{{Servico.Equipe}}</td>
+          <td>{{Servico.valor_inicial}}</td>
+          <td>{{Servico.valor_final}}</td>
+        </tr>
       {% endfor %}
   </tbody>
 </div>
