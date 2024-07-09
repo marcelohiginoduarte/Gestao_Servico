@@ -16,7 +16,7 @@
                     </a>
                     <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
                         <li class="nav-item">
-                            <a href="#" class="nav-link align-middle px-0">
+                            <a href="{% url 'home' %}" class="nav-link align-middle px-0">
                                 <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
                             </a>
                         </li>
@@ -25,15 +25,15 @@
                                 <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Cadastrar</span> </a>
                             <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
                                 <li class="w-100">
-                                    <a href="cadastroservico/" class="nav-link px-0"> <span class="d-none d-sm-inline">Cadastrar Serviço</span> </a>
+                                    <a href="{% url 'cadastroservico' %}" class="nav-link px-0"> <span class="d-none d-sm-inline">Cadastrar Serviço</span> </a>
                                 </li>
                                 <li>
-                                    <a href="cadastroequipes/" class="nav-link px-0"> <span class="d-none d-sm-inline">Cadastrar Equipes</span>  </a>
+                                    <a href="{% url 'cadastroequipe' %}" class="nav-link px-0"> <span class="d-none d-sm-inline">Cadastrar Equipes</span>  </a>
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <a href="/visualizar/" class="nav-link px-0 align-middle">
+                            <a href="{% url 'VisualizarServicos' %}" class="nav-link px-0 align-middle">
                                 <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Visualizar Serviços</span></a>
                         </li>
                         <li>
