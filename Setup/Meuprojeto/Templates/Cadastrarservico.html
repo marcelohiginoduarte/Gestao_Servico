@@ -3,7 +3,16 @@
 
 {% block 'Material' %}
                 
-<div class="col py-3">
+<div class="col-3 py-3">
+
+    {% if erro == '1' %}
+        <div class="alert alert-danger" role="alert">
+            {{texto}}
+            
+        </div>
+    {% endif %}
+
+
     <form action="/cadastroservico/" method="post">
         {% csrf_token %}
         <div class="mb-3">

@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from Meuprojeto.models import Servico, Equipe
 
 def home(request):
@@ -6,7 +6,9 @@ def home(request):
 
 def CadastrarServico(request):
     if request.method == "GET":
-        return render (request, 'Cadastrarservico.html')
+        erro = request.GET.get('erro')
+        texto = request.GET.get('texto')
+        return render (request, 'Cadastrarservico.html', {'erro': erro, 'texto':texto})
     if request.method == "POST":
         Projeto = request.POST.get('Projeto')
         Nota = request.POST.get('nota')
@@ -19,6 +21,9 @@ def CadastrarServico(request):
         Equipe = request.POST.get('Equipe')
         valor_inicial = request.POST.get('valor_inicial')
         valor_final = request.POST.get('valor_final')
+
+        if len(Projeto) <= 8:
+            return redirect('/cadastroservico/?erro=1&texto=Digite um projeto valido')
 
         servico = Servico(
             Projeto = Projeto,
@@ -80,3 +85,8 @@ def VisualizarServicos(request):
     visualizar_servicos = Servico.objects.all()
     print(visualizar_servicos)
     return render(request, 'Visualizar.html',)
+
+def StatusServico(request):
+    if Status == '':
+        return 'Em Programacao'
+
