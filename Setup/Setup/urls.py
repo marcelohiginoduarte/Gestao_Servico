@@ -21,7 +21,7 @@ from Meuprojeto import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
-    path('cadastroservico/', views.CadastrarServico, name='cadastroservico'),
-    path('cadastroequipe/', views.CadastroEquipes, name='cadastroequipe'),
-    path('VisualizarServicos/', views.VisualizarServicos, name='VisualizarServicos'),
+    path('cadastroservico/', views.cadastrar_servico, name='cadastroservico'),
+    path('cadastroequipe/', views.cadastro_equipes, name='cadastroequipe'),
+    path('visualizar_servicos/', views.visualizar_servicos, name='visualizar_servicos'),
 ]
