@@ -2,22 +2,22 @@ from django.db import models
 
 
 class Servico(models.Model):
-    Status_projeto = {
-        "Em Programacao": "Em programacao",
-        "Programado": "Programado",
-        "Em execucao": "Em execucao",
-        "Executado": "Executado",
-        "Executado Fora Prazo": "Executado Fora Prazo",
-        "Nao Executado": "Nao Executado",
-        "Interropida": "Interropida",
-        "Medicao": "Medicao",
-        "Entregue": "Entregue",
-        "Pago": "Pago",
-    }
+    Status_projeto = [ 
+        ("Em Programacao", "Em programacao"),
+        ("Programado", "Programado"),
+        ("Em execucao", "Em execucao"),
+        ("Executado", "Executado"),
+        ("Executado Fora Prazo", "Executado Fora Prazo"),
+        ("Nao Executado", "Nao Executado"),
+        ("Interropida", "Interropida"),
+        ("Medicao", "Medicao"),
+        ("Entregue", "Entregue"),
+        ("Pago", "Pago"),
+]
 
     Projeto = models.CharField(max_length=12)
     Nota = models.CharField(max_length=10)
-    Status = models.CharField(max_length= 20)
+    Status = models.CharField(max_length= 30, choices=Status_projeto)
     Descricao = models.CharField(max_length=50)
     Local = models.CharField(max_length=50)
     Data_Inicio = models.DateField(blank=True, null=True)

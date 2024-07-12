@@ -85,7 +85,7 @@ def CadastroEquipes(request):
 def VisualizarServicos(request):
     visualizar_servicos = Servico.objects.all()
     print(visualizar_servicos)
-    return render(request, 'Visualizar.html', {'visualizer_servicos': visualizar_servicos})
+    return render(request, 'Visualizar.html', {'visualizar_servicos': visualizar_servicos})
 
 def StatusServico(request):
     if Status == '':
