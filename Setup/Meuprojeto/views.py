@@ -84,10 +84,17 @@ def CadastroEquipes(request):
 
 def VisualizarServicos(request):
     visualizar_servicos = Servico.objects.all()
-    print(visualizar_servicos)
     return render(request, 'Visualizar.html', {'visualizar_servicos': visualizar_servicos})
+
+def visualizar_equipes(request):
+    visualizar_equipes = Equipe.objects.all()
+    return render(request, 'visualizar_equipes.html', {'visualizar_equipes': visualizar_equipes})
 
 def StatusServico(request):
     if Status == '':
         return 'Em Programacao'
+    
+def vizualizar_medicao(request):
+    visualizarmedicao = Servico.objects.filter(Servico.Status == 'Medicao')
+    return render(request, 'visualizarmedicao.html', {'visualizarmedicao':visualizarmedicao})
 

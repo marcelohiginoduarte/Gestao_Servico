@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block 'titulo' %}Visualizar Equipes{% endblock %}
+
+{% block 'Material' %}
+
+<h1>Em medição temos os projetos</h1>
+<hr>
+<br>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Projeto</th>
+      <th scope="col">nota</th>
+      <th scope="col">status</th>
+      <th scope="col">Descricao</th>
+      <th scope="col">Local</th>
+      <th scope="col">Data Inicio</th>
+      <th scope="col">Data Fim</th>
+      <th scope="col">Data Programacao</th>
+      <th scope="col">Equipe</th>
+      <th scope="col">valor inicial</th>
+      <th scope="col">valor final</th>
+    </tr>
+  </thead>
+  <tbody>
+      {% for ServicoM in visualizarmedicao %}
+        <tr>
+          <td>{{ServicoM.Projeto}}</td>
+          <td>{{ServicoM.Nota}}</td>
+          <td>{{ServicoM.Status}}</td>
+          <td>{{ServicoM.Descricao}}</td>
+          <td>{{ServicoM.Local}}</td>
+          <td>{{ServicoM.Data_Inicio}}</td>
+          <td>{{ServicoM.Data_Fim}}</td>
+          <td>{{ServicoM.Data_Programacao}}</td>
+          <td>{{ServicoM.Equipe}}</td>
+          <td>{{ServicoM.valor_inicial}}</td>
+          <td>{{ServicoM.valor_final}}</td>
+        </tr>
+      {% endfor %}
+  </tbody>
+</div>
+</table>
+
+
+
+{% endblock %}

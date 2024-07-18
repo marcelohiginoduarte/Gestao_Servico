@@ -24,4 +24,6 @@ urlpatterns = [
     path('cadastroservico/', views.CadastrarServico, name='cadastroservico'),
     path('cadastroequipe/', views.CadastroEquipes, name='cadastroequipe'),
     path('VisualizarServicos/', views.VisualizarServicos, name='VisualizarServicos'),
+    path('visualizarequipes/', views.visualizar_equipes, name='visualizarequipes'),
+    path('visualizarmedicao/', views.vizualizar_medicao, name='visualizaremmedicao'),
 ]

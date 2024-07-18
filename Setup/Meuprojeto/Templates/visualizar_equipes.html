@@ -9,33 +9,19 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th scope="col">Projeto</th>
-      <th scope="col">nota</th>
-      <th scope="col">status</th>
-      <th scope="col">Descricao</th>
-      <th scope="col">Local</th>
-      <th scope="col">Data_Inicio</th>
-      <th scope="col">Data_Fim</th>
-      <th scope="col">Data_Programacao</th>
-      <th scope="col">Equipe</th>
-      <th scope="col">valor_inicial</th>
-      <th scope="col">valor_final</th>
+      <th scope="col">NumeroEquipe</th>
+      <th scope="col">Nome_Encaregado</th>
+      <th scope="col">Matricula_Encaregado</th>
+      <th scope="col">Nome_Eletricista_1</th>
     </tr>
   </thead>
   <tbody>
-      {% for Servico in visualizar_servicos %}
+      {% for equipe in visualizar_equipes %}
         <tr>
-          <td>{{Servico.Projeto}}</td>
-          <td>{{Servico.Nota}}</td>
-          <td>{{Servico.Status}}</td>
-          <td>{{Servico.Descricao}}</td>
-          <td>{{Servico.Local}}</td>
-          <td>{{Servico.Data_Inicio}}</td>
-          <td>{{Servico.Data_Fim}}</td>
-          <td>{{Servico.Data_Programacao}}</td>
-          <td>{{Servico.Equipe}}</td>
-          <td>{{Servico.valor_inicial}}</td>
-          <td>{{Servico.valor_final}}</td>
+          <td>{{equipe.NumeroEquipe}}</td>
+          <td>{{equipe.Nome_Encaregado}}</td>
+          <td>{{equipe.Matricula_Encaregado}}</td>
+          <td>{{equipe.Nome_Eletricista_1}}</td>
         </tr>
       {% endfor %}
   </tbody>
