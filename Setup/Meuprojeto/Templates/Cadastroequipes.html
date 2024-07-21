@@ -3,63 +3,102 @@
 
 
 {% block 'Material' %}
+
+<h1>Cadastrar Equipe</h1>
 <div class="container">
-  <div class="col-3">
+  <div class="col-8">
       <form action="/cadastroequipe/" method="post">{% csrf_token %}
-        <legend>Cadastro de Equipes</legend>
-          <div class="mb-3">
-            <label for="disabledTextInput" class="form-label">Numero da Equipe</label>
-            <input type="text" id="disabledTextInput" class="form-control" placeholder="Numero da Equipe" name="NumeroEquipe">
+        <div class="row">
+          <div class="col-4">
+            <div class="mb-3">
+              <label for="disabledTextInput" class="form-label">Numero da Equipe</label>
+              <input type="text" id="disabledTextInput" class="form-control" placeholder="Numero da Equipe" name="NumeroEquipe">
+            </div>
           </div>
-          <div class="mb-3">
-            <label for="disabledTextInput" class="form-label">Nome_Encaregado</label>
-            <input type="text" id="disabledTextInput" class="form-control" placeholder="Numero da Equipe" name="Nome_Encaregado">
+          <div class="col-4">
+            <div class="mb-3">
+              <label for="disabledTextInput" class="form-label">Nome Encaregado</label>
+              <input type="text" id="disabledTextInput" class="form-control" placeholder="Numero da Equipe" name="Nome_Encaregado">
+            </div>
           </div>
-        <div class="mb-3">
-          <label for="disabledTextInput" class="form-label">Matricula_Encaregado</label>
-          <input type="text" id="disabledTextInput" class="form-control" placeholder="Numero da Equipe" name="Matricula_Encaregado">
+        <div class="col-4">
+          <div class="mb-3">
+            <label for="disabledTextInput" class="form-label">Matricula Encaregado</label>
+            <input type="text" id="disabledTextInput" class="form-control" placeholder="Numero da Equipe" name="Matricula_Encaregado">
+          </div>
         </div>
-        <div class="mb-3">
-          <label for="disabledTextInput" class="form-label">Nome_Eletricista_1</label>
-          <input type="text" id="disabledTextInput" class="form-control" placeholder="Numero da Equipe" name="Nome_Eletricista_1">
+        <div class="row">
         </div>
-        <div class="mb-3">
-          <label for="disabledTextInput" class="form-label">Matricula_Eletricista1</label>
-          <input type="text" id="disabledTextInput" class="form-control" placeholder="Numero da Equipe" name="Matricula_Eletricista1">
+          <div class="col-4">
+              <div class="mb-3">
+                <label for="disabledTextInput" class="form-label">Nome Eletricista_1</label>
+                <input type="text" id="disabledTextInput" class="form-control" placeholder="Numero da Equipe" name="Nome_Eletricista_1">
+              </div>
+          </div>
+          <div class="col-4">
+            <div class="mb-3">
+              <label for="disabledTextInput" class="form-label">Matricula Eletricista1</label>
+              <input type="text" id="disabledTextInput" class="form-control" placeholder="Numero da Equipe" name="Matricula_Eletricista1">
+            </div>
+          </div>
         </div>
-        <div class="mb-3">
-          <label for="disabledTextInput" class="form-label">Nome_Eletricista_2</label>
-          <input type="text" id="disabledTextInput" class="form-control" placeholder="Numero da Equipe" name="Nome_Eletricista_2">
+        <div class="row">
+          <div class="col-4">
+            <div class="mb-3">
+              <label for="disabledTextInput" class="form-label">Nome Eletricista_2</label>
+              <input type="text" id="disabledTextInput" class="form-control" placeholder="Numero da Equipe" name="Nome_Eletricista_2">
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="mb-3">
+              <label for="disabledTextInput" class="form-label">Matricula Eletricista2</label>
+              <input type="text" id="disabledTextInput" class="form-control" placeholder="Numero da Equipe" name="Matricula_Eletricista2">
+            </div>
+          </div>
         </div>
-        <div class="mb-3">
-          <label for="disabledTextInput" class="form-label">Matricula_Eletricista2</label>
-          <input type="text" id="disabledTextInput" class="form-control" placeholder="Numero da Equipe" name="Matricula_Eletricista2">
+        <div class="row">
+          <div class="col-4">
+            <div class="mb-3">
+              <label for="disabledTextInput" class="form-label">Nome Eletricista_3</label>
+              <input type="text" id="disabledTextInput" class="form-control" placeholder="Numero da Equipe" name="Nome_Eletricista_3">
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="mb-3">
+              <label for="disabledTextInput" class="form-label">Matricula_Eletricista3</label>
+              <input type="text" id="disabledTextInput" class="form-control" placeholder="Numero da Equipe" name="Matricula_Eletricista3">
+            </div>
+          </div>
         </div>
-        <div class="mb-3">
-          <label for="disabledTextInput" class="form-label">Nome_Eletricista_3</label>
-          <input type="text" id="disabledTextInput" class="form-control" placeholder="Numero da Equipe" name="Nome_Eletricista_3">
+        <div class="row">
+          <div class="col-4">
+            <div class="mb-3">
+              <label for="disabledTextInput" class="form-label">Nome_Eletricista_4</label>
+              <input type="text" id="disabledTextInput" class="form-control" placeholder="Numero da Equipe" name="Nome_Eletricista_4">
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="mb-3">
+              <label for="disabledTextInput" class="form-label">Matricula_Eletricista4</label>
+              <input type="text" id="disabledTextInput" class="form-control" placeholder="Numero da Equipe" name="Matricula_Eletricista4">
+            </div>
+          </div>
         </div>
-        <div class="mb-3">
-          <label for="disabledTextInput" class="form-label">Matricula_Eletricista3</label>
-          <input type="text" id="disabledTextInput" class="form-control" placeholder="Numero da Equipe" name="Matricula_Eletricista3">
+        <div class="row">
+          <div class="col-4">
+            <div class="mb-3">
+              <label for="disabledTextInput" class="form-label">Nome_Ajudante_1</label>
+              <input type="text" id="disabledTextInput" class="form-control" placeholder="Numero da Equipe" name="Nome_Ajudante_1">
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="mb-3">
+              <label for="disabledTextInput" class="form-label">Matricula_Ajudante1</label>
+              <input type="text" id="disabledTextInput" class="form-control" placeholder="Numero da Equipe" name="Matricula_Ajudante1">
+            </div>
+          </div>
         </div>
-        <div class="mb-3">
-          <label for="disabledTextInput" class="form-label">Nome_Eletricista_4</label>
-          <input type="text" id="disabledTextInput" class="form-control" placeholder="Numero da Equipe" name="Nome_Eletricista_4">
-        </div>
-        <div class="mb-3">
-          <label for="disabledTextInput" class="form-label">Matricula_Eletricista4</label>
-          <input type="text" id="disabledTextInput" class="form-control" placeholder="Numero da Equipe" name="Matricula_Eletricista4">
-        </div>
-        <div class="mb-3">
-          <label for="disabledTextInput" class="form-label">Nome_Ajudante_1</label>
-          <input type="text" id="disabledTextInput" class="form-control" placeholder="Numero da Equipe" name="Nome_Ajudante_1">
-        </div>
-        <div class="mb-3">
-          <label for="disabledTextInput" class="form-label">Matricula_Ajudante1</label>
-          <input type="text" id="disabledTextInput" class="form-control" placeholder="Numero da Equipe" name="Matricula_Ajudante1">
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Salvar</button>
       </form>
   </div>
 </div>

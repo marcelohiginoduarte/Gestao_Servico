@@ -13,6 +13,8 @@ def CadastrarServico(request):
         Projeto = request.POST.get('Projeto')
         Nota = request.POST.get('nota')
         Status = request.POST.get('status')
+        if Status == " ":
+            return 'Em Programacao'
         Descricao = request.POST.get('Descricao')
         Local = request.POST.get('Local')
         Data_Inicio = request.POST.get('Data_Inicio')
@@ -22,7 +24,7 @@ def CadastrarServico(request):
         valor_inicial = request.POST.get('valor_inicial')
         valor_final = request.POST.get('valor_final')
 
-        if len(Projeto) <=7:
+        if len(Projeto) <=5:
             return redirect('/cadastroservico/?erro=1&texto=Digite um projeto valido')
         
 

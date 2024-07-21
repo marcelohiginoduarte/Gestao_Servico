@@ -3,8 +3,8 @@
 
 {% block 'Material' %}
                 
-<div class="col-3 py-3">
 
+<div class="col-12">
     {% if erro == '1' %}
         <div class="alert alert-danger" role="alert">
             {{texto}}
@@ -12,65 +12,95 @@
         </div>
     {% endif %}
 
+    <h1>Cadastrar Serviços</h1>
 
     <form action="/cadastroservico/" method="post">
         {% csrf_token %}
-        <div class="mb-3">
-            <label for="ProjetoOS" class="form-label">Projeto ou Orden de Serviço</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" name="Projeto">
+        <div class="row">
+            <div class="col-3">
+                <div class="mb-3">
+                    <label for="ProjetoOS" class="form-label">Projeto ou Orden de Serviço</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="Projeto">
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="mb-3">
+                    <label for="nota" class="form-label">nota</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="nota">
+                </div>
+            </div>
+            <div class="col-3">
+                <span>Status Obras</span>
+                <select class="form-select form-select-lg mb-3" name="status">
+                    <option selected></option>
+                    <option value="Em programacao">Em programacao</option>
+                    <option value="Programado">Programado</option>
+                    <option value="Em execucao">Em execucao</option>
+                    <option value="Executado">Executado</option>
+                    <option value="Executado Fora Prazo">Executado Fora do Prazo</option>
+                    <option value="Nao Executado">Nao Executado</option>
+                    <option value="Interropida">Interropida</option>
+                    <option value="Medicao">Medicao</option>
+                    <option value="Entregue">Entregue</option>
+                    <option value="Pago">Pago</option>
+                </select>
+            </div>
         </div>
-        <div class="mb-3">
-            <label for="nota" class="form-label">nota</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" name="nota">
+        <div class="row">
+            <div class="col-3">
+                <div class="mb-3">
+                    <label for="nota" class="form-label">Descricao</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="Descricao">
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="mb-3">
+                    <label for="nota" class="form-label">Local</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="Local">
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="mb-3">
+                    <label for="data" class="form-label">Data_Inicio</label>
+                    <input type="date" class="form-control" id="exampleInputEmail1" name="Data_Inicio">
+                </div>
+            </div>
         </div>
-        <span>Status Obras</span>
-        <select class="form-select form-select-lg mb-3" name="status">
-            <option selected>Status</option>
-            <option value="Em programacao">Em programacao</option>
-            <option value="Programado">Programado</option>
-            <option value="Em execucao">Em execucao</option>
-            <option value="Executado">Executado</option>
-            <option value="Executado Fora Prazo">Executado Fora do Prazo</option>
-            <option value="Nao Executado">Nao Executado</option>
-            <option value="Interropida">Interropida</option>
-            <option value="Medicao">Medicao</option>
-            <option value="Entregue">Entregue</option>
-            <option value="Pago">Pago</option>
-        </select>
-        <div class="mb-3">
-            <label for="nota" class="form-label">Descricao</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" name="Descricao">
+        <div class="row">
+            <div class="col-3">
+                <div class="mb-3">
+                    <label for="data" class="form-label">Data_Fim</label>
+                    <input type="date" class="form-control" id="exampleInputEmail1" name="Data_Fim">
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="mb-3">
+                    <label for="data" class="form-label">Data_Programacao</label>
+                    <input type="date" class="form-control" id="exampleInputEmail1" name="Data_Programacao">
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="mb-3">
+                    <label for="nota" class="form-label">Equipe</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="Equipe">
+                </div>
+            </div>
         </div>
-        <div class="mb-3">
-            <label for="nota" class="form-label">Local</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" name="Local">
+        <div class="row">
+            <div class="col-3">
+                <div class="mb-3">
+                    <label for="nota" class="form-label">valor_inicial</label>
+                    <input type="number" class="form-control" id="exampleInputEmail1" name="valor_inicial">
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="mb-3">
+                    <label for="nota" class="form-label">valor_final</label>
+                    <input type="number" class="form-control" id="exampleInputEmail1" name="valor_final">
+                </div>
+            </div>
         </div>
-        <div class="mb-3">
-            <label for="nota" class="form-label">Data_Inicio</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" name="Data_Inicio">
-        </div>
-        <div class="mb-3">
-            <label for="nota" class="form-label">Data_Fim</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" name="Data_Fim">
-        </div>
-        <div class="mb-3">
-            <label for="nota" class="form-label">Data_Programacao</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" name="Data_Programacao">
-        </div>
-        <div class="mb-3">
-            <label for="nota" class="form-label">Equipe</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" name="Equipe">
-        </div>
-        <div class="mb-3">
-            <label for="nota" class="form-label">valor_inicial</label>
-            <input type="number" class="form-control" id="exampleInputEmail1" name="valor_inicial">
-        </div>
-        <div class="mb-3">
-            <label for="nota" class="form-label">valor_final</label>
-            <input type="number" class="form-control" id="exampleInputEmail1" name="valor_final">
-        </div>
-
-        <button type="submit" class="btn btn-primary">Enviar</button>
+        <button type="submit" class="btn btn-primary">Salvar</button>
     </form>
 </div>
 {% endblock %}
