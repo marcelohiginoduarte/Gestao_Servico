@@ -5,6 +5,10 @@
 
 <h1>Os Serviços são</h1>
 <hr>
+<form method="get">
+  {{ filter.form.as_p }}
+  <button type="submit">Buscar</button>
+</form>
 <br>
 <table class="table table-striped">
   <thead>
@@ -34,8 +38,8 @@
           <td>{{Servico.Data_Fim}}</td>
           <td>{{Servico.Data_Programacao}}</td>
           <td>{{Servico.Equipe}}</td>
-          <td>{{Servico.valor_inicial}}</td>
-          <td>{{Servico.valor_final}}</td>
+          <td>R$ {{Servico.valor_inicial}}</td>
+          <td>R${{Servico.valor_final}}</td>
         </tr>
       {% endfor %}
   </tbody>

@@ -20,19 +20,19 @@
             <div class="col-3">
                 <div class="mb-3">
                     <label for="ProjetoOS" class="form-label">Projeto ou Orden de Serviço</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" name="Projeto">
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="Projeto" required>
                 </div>
             </div>
             <div class="col-3">
                 <div class="mb-3">
                     <label for="nota" class="form-label">nota</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" name="nota">
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="nota" required>
                 </div>
             </div>
             <div class="col-3">
                 <span>Status Obras</span>
-                <select class="form-select form-select-lg mb-3" name="status">
-                    <option selected></option>
+                <select class="form-select form-select-lg mb-3" name="status" required>
+                    <option selected> </option>
                     <option value="Em programacao">Em programacao</option>
                     <option value="Programado">Programado</option>
                     <option value="Em execucao">Em execucao</option>
@@ -50,19 +50,19 @@
             <div class="col-3">
                 <div class="mb-3">
                     <label for="nota" class="form-label">Descricao</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" name="Descricao">
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="Descricao" required>
                 </div>
             </div>
             <div class="col-3">
                 <div class="mb-3">
                     <label for="nota" class="form-label">Local</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" name="Local">
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="Local" required>
                 </div>
             </div>
             <div class="col-3">
                 <div class="mb-3">
                     <label for="data" class="form-label">Data_Inicio</label>
-                    <input type="date" class="form-control" id="exampleInputEmail1" name="Data_Inicio">
+                    <input type="date" class="form-control" id="exampleInputEmail1" name="Data_Inicio" required>
                 </div>
             </div>
         </div>
@@ -70,19 +70,19 @@
             <div class="col-3">
                 <div class="mb-3">
                     <label for="data" class="form-label">Data_Fim</label>
-                    <input type="date" class="form-control" id="exampleInputEmail1" name="Data_Fim">
+                    <input type="date" class="form-control" id="exampleInputEmail1" name="Data_Fim" required>
                 </div>
             </div>
             <div class="col-3">
                 <div class="mb-3">
                     <label for="data" class="form-label">Data_Programacao</label>
-                    <input type="date" class="form-control" id="exampleInputEmail1" name="Data_Programacao">
+                    <input type="date" class="form-control" id="exampleInputEmail1" name="Data_Programacao" required>
                 </div>
             </div>
             <div class="col-3">
                 <div class="mb-3">
                     <label for="nota" class="form-label">Equipe</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" name="Equipe">
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="Equipe" required>
                 </div>
             </div>
         </div>
@@ -90,13 +90,13 @@
             <div class="col-3">
                 <div class="mb-3">
                     <label for="nota" class="form-label">valor_inicial</label>
-                    <input type="number" class="form-control" id="exampleInputEmail1" name="valor_inicial">
+                    <input type="number" step=".01" class="form-control" id="exampleInputEmail1" name="valor_inicial" required>
                 </div>
             </div>
             <div class="col-3">
                 <div class="mb-3">
                     <label for="nota" class="form-label">valor_final</label>
-                    <input type="number" class="form-control" id="exampleInputEmail1" name="valor_final">
+                    <input type="number" step=".01" class="form-control" id="exampleInputEmail1" name="valor_final" required>
                 </div>
             </div>
         </div>
@@ -104,3 +104,4 @@
     </form>
 </div>
 {% endblock %}
+

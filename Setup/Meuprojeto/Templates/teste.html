@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block 'titulo' %}Cadastrar Serviços{% endblock %}
+
+{% block 'Material' %}
+    <h1>Cadastrar Serviços</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Salvar</button>
+    </form>
+{% endblock %}

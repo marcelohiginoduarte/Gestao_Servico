@@ -21,9 +21,9 @@ from Meuprojeto import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
-    path('cadastroservico/', views.CadastrarServico, name='cadastroservico'),
-    path('cadastroequipe/', views.CadastroEquipes, name='cadastroequipe'),
-    path('VisualizarServicos/', views.VisualizarServicos, name='VisualizarServicos'),
-    path('visualizarequipes/', views.visualizar_equipes, name='visualizarequipes'),
-    path('visualizarmedicao/', views.vizualizar_medicao, name='visualizaremmedicao'),
+    path('cadastroservico/', views.cadastrar_servico, name='cadastroservico'),
+    path('cadastroequipe/', views.cadastro_equipes, name='cadastroequipe'),
+    path('visualizar_servicos/', views.visualizar_servicos, name='visualizar_servicos'),
+    path('atualizarservico/<int:pk>/', views.fazer_update.as_view(), name='fazer_update'),
+    #path('visualizarmedicao/', views.vizualizar_medicao, name='visualizaremmedicao'),
 ]
