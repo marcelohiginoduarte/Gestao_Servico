@@ -36,11 +36,18 @@ def cadastro_equipes(request):
     else:
         form = EquipeForm()
     return render(request, 'cadastro_equipes.html', {'form': form})
+
+
 #essa linha, é a linha que visualiza todos os serviços.
 def visualizar_servicos(request):
     servicos = Servico.objects.all()
     filtro = filtar_servico(request.GET, servicos)
     return render(request, 'visualizar_servicos.html', {'visualizar_servicos': filtro.qs, 'filter':filtro})
+
+
+def visualizarequipes(request):
+    equipes = Equipe.objects.all()
+    return render(request, 'visualizar_equipes.html', {'equipes':equipes})
 
 
 def status_servico(request):

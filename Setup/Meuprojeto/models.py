@@ -15,14 +15,15 @@ class Servico(models.Model):
         ("Pago", "Pago"),
 ]
 
-    Projeto = models.CharField(max_length=12)
-    Nota = models.CharField(max_length=10)
+    Projeto = models.CharField(max_length=12, unique=True)
+    Nota = models.CharField(max_length=10, unique=True)
     Status = models.CharField(max_length= 30, choices=Status_projeto)
     Descricao = models.CharField(max_length=50)
     Local = models.CharField(max_length=50)
     Data_Inicio = models.DateField(blank=True, null=True)
     Data_Fim = models.DateField(blank=True, null=True)
     Data_Programacao = models.DateField(blank=True, null=True)
+    evidencia_execucao = models.ImageField(blank=True, null=True, upload_to="emp_profile_pics/")
     Equipe = models.CharField(max_length=5)
     valor_inicial = models.DecimalField(max_digits=10, decimal_places=2)
     valor_final = models.DecimalField(max_digits=10, decimal_places=2)
