@@ -4,6 +4,7 @@ from Meuprojeto.models import Servico, Equipe
 from Meuprojeto.forms import ServicoForm, EquipeForm
 from Meuprojeto.filters import filtar_servico
 from django.urls import reverse_lazy
+from django.views import View
 
 def home(request):
     return render(request, 'Home.html')
@@ -32,7 +33,7 @@ def cadastro_equipes(request):
         form = EquipeForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('visualizar_equipes')
+            return redirect('visualizarequipes')
     else:
         form = EquipeForm()
     return render(request, 'cadastro_equipes.html', {'form': form})
@@ -45,7 +46,7 @@ def visualizar_servicos(request):
     return render(request, 'visualizar_servicos.html', {'visualizar_servicos': filtro.qs, 'filter':filtro})
 
 
-def visualizarequipes(request):
+def visualizar_equipes(request):
     equipes = Equipe.objects.all()
     return render(request, 'visualizar_equipes.html', {'equipes':equipes})
 
@@ -64,3 +65,9 @@ class fazer_update(UpdateView):
     template_name = 'editar_servico.html'
     fields = ['Projeto', 'Nota', 'Status', 'Descricao', 'Local', 'Data_Inicio', 'Data_Fim', 'Data_Programacao', 'Equipe', 'valor_inicial', 'valor_final']
     success_url = reverse_lazy('visualizar_servicos')
+
+
+def teste(request):
+    teste = Servico.objects.all()
+    filtro_teste = filtar_servico(request.GET, teste)
+    return render(request, 'cadastrar_servico.html', {'teste': filtro_teste.qs, 'filter': filtro_teste})

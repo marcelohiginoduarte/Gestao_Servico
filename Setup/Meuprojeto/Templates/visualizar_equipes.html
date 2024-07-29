@@ -6,26 +6,25 @@
 <h1>As Equipes são</h1>
 <hr>
 <br>
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th scope="col">NumeroEquipe</th>
-      <th scope="col">Nome_Encaregado</th>
-      <th scope="col">Matricula_Encaregado</th>
-      <th scope="col">Nome_Eletricista_1</th>
-    </tr>
-  </thead>
-  <tbody>
-      {% for equipe in equipes %}
-        <tr>
-          <td>{{equipe.NumeroEquipe}}</td>
-          <td>{{equipe.Nome_Encaregado}}</td>
-          <td>{{equipe.Matricula_Encaregado}}</td>
-          <td>{{equipe.Nome_Eletricista_1}}</td>
-        </tr>
-      {% endfor %}
-  </tbody>
-</div>
-</table>
-
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">NumeroEquipe</th>
+        <th scope="col">Nome_Encaregado</th>
+        <th scope="col">Matricula_Encaregado</th>
+        <th scope="col">Nome_Eletricista_1</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for equipe in equipes %}
+          <tr>
+            <td>{{equipe.NumeroEquipe}}</td>
+            <td>{{equipe.Nome_Encaregado}}</td>
+            <td>{{equipe.Matricula_Encaregado}}</td>
+            <td>{{equipe.Nome_Eletricista_1}}</td>
+          </tr>
+        {% endfor %}
+    </tbody>
+  </div>
+  </table>
 {% endblock %}
