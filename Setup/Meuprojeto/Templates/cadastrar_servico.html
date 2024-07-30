@@ -4,104 +4,43 @@
 {% block 'Material' %}
                 
 
-<div class="col-12">
-    {% if erro == '1' %}
-        <div class="alert alert-danger" role="alert">
-            {{texto}}
-            
-        </div>
-    {% endif %}
+<h1>Atualizar Serviço</h1>
+  <form method="get">
+    {{ filter.form.as_p }}
+    <button type="submit">Buscar</button>
+  </form>
 
-    <h1>Cadastrar Serviços</h1>
+      <form action="atualizarservico" method="post">
+        {% for servico in tudo %}
+        <label for="projeto"> Projeto</label><br>
+        <input type="text" value="{{servico.Projeto}}">
+        <label for="projeto"> Nota</label>
+        <input type="text" value="{{servico.Nota}}">
+        <label for="projeto"> status</label><br>
+        <input type="text" value="{{servico.Status}}">
+        <label for="projeto"> Descricao</label><br>
+        <input type="text" value="{{servico.Descricao}}">
+        <label for="projeto"> Local</label>
+        <input type="text" value="{{servico.Local}}">
+        <label for="projeto"> status</label><br>
+        <input type="text" value="{{servico.Data_Inicio}}">
+        <label for="projeto"> Data_Fim</label>
+        <input type="text" value="{{servico.Data_Fim}}">
+        <label for="projeto"> Data_Programacao</label><br>
+        <input type="text" value="{{servico.Data_Programacao}}">
+        <label for="projeto"> Equipe</label><br>
+        <input type="text" value="{{servico.Equipe}}">
+        <label for="projeto"> valor_inicial</label><br>
+        <input type="text" value="{{servico.valor_inicial}}">
+        <label for="projeto"> valor_final</label>
+        <input type="text" value="{{servico.valor_final}}">
+        {% endfor %}
+        <br>
+        <hr>
+        <button type="submit">Salvar</button>
+        <button type="reset">Limpar</button>
+      </form>
 
-    <form action="/cadastroservico/" method="post">
-        {% csrf_token %}
-        <div class="row">
-            <div class="col-3">
-                <div class="mb-3">
-                    <label for="ProjetoOS" class="form-label">Projeto ou Orden de Serviço</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" name="Projeto" required>
-                </div>
-            </div>
-            <div class="col-3">
-                <div class="mb-3">
-                    <label for="nota" class="form-label">nota</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" name="nota" required>
-                </div>
-            </div>
-            <div class="col-3">
-                <span>Status Obras</span>
-                <select class="form-select form-select-lg mb-3" name="status" required>
-                    <option selected> </option>
-                    <option value="Em programacao">Em programacao</option>
-                    <option value="Programado">Programado</option>
-                    <option value="Em execucao">Em execucao</option>
-                    <option value="Executado">Executado</option>
-                    <option value="Executado Fora Prazo">Executado Fora do Prazo</option>
-                    <option value="Nao Executado">Nao Executado</option>
-                    <option value="Interropida">Interropida</option>
-                    <option value="Medicao">Medicao</option>
-                    <option value="Entregue">Entregue</option>
-                    <option value="Pago">Pago</option>
-                </select>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-3">
-                <div class="mb-3">
-                    <label for="nota" class="form-label">Descricao</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" name="Descricao" required>
-                </div>
-            </div>
-            <div class="col-3">
-                <div class="mb-3">
-                    <label for="nota" class="form-label">Local</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" name="Local" required>
-                </div>
-            </div>
-            <div class="col-3">
-                <div class="mb-3">
-                    <label for="data" class="form-label">Data_Inicio</label>
-                    <input type="date" class="form-control" id="exampleInputEmail1" name="Data_Inicio" required>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-3">
-                <div class="mb-3">
-                    <label for="data" class="form-label">Data_Fim</label>
-                    <input type="date" class="form-control" id="exampleInputEmail1" name="Data_Fim" required>
-                </div>
-            </div>
-            <div class="col-3">
-                <div class="mb-3">
-                    <label for="data" class="form-label">Data_Programacao</label>
-                    <input type="date" class="form-control" id="exampleInputEmail1" name="Data_Programacao" value="2024/04/20" required>
-                </div>
-            </div>
-            <div class="col-3">
-                <div class="mb-3">
-                    <label for="nota" class="form-label">Equipe</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" name="Equipe" required>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-3">
-                <div class="mb-3">
-                    <label for="nota" class="form-label">valor_inicial</label>
-                    <input type="number" step=".01" class="form-control" id="exampleInputEmail1" name="valor_inicial" required>
-                </div>
-            </div>
-            <div class="col-3">
-                <div class="mb-3">
-                    <label for="nota" class="form-label">valor_final</label>
-                    <input type="number" step=".01" class="form-control" id="exampleInputEmail1" name="valor_final" required>
-                </div>
-            </div>
-        </div>
-        <button type="submit" class="btn btn-primary">Salvar</button>
-    </form>
-</div>
+
 {% endblock %}
 

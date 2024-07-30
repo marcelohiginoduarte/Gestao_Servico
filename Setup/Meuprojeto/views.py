@@ -71,3 +71,19 @@ def teste(request):
     teste = Servico.objects.all()
     filtro_teste = filtar_servico(request.GET, teste)
     return render(request, 'cadastrar_servico.html', {'teste': filtro_teste.qs, 'filter': filtro_teste})
+
+def visualizar_medicao(request):
+    medicao = Servico.objects.filter(Status='Medicao')
+    return render(request, 'visualizar_medicao.html', {'medicao':medicao})
+
+class servico_lista(ListView):
+    model = Servico
+    queryset = Servico.objects.all()
+    template_name = 'cadastrar_servico.html'
+
+def filtrtrarunitario(request):
+    tudo = Servico.objects.all()
+    unitario=filtar_servico(request.GET, tudo)
+    form.save()
+    return render(request, 'cadastrar_servico.html', {'tudo':unitario.qs, 'filter':unitario})
+
