@@ -4,7 +4,9 @@ from Meuprojeto.models import Servico, Equipe
 from Meuprojeto.forms import ServicoForm, EquipeForm
 from Meuprojeto.filters import filtar_servico
 from django.urls import reverse_lazy
+from django.db.models import Sum
 from django.views import View
+
 
 def home(request):
     return render(request, 'Home.html')
@@ -61,9 +63,9 @@ def status_servico(request):
 
 class fazer_update(UpdateView):
     model = Servico
-    form_class = ServicoForm
+    #form_class = ServicoForm
     template_name = 'editar_servico.html'
-    fields = ['Projeto', 'Nota', 'Status', 'Descricao', 'Local', 'Data_Inicio', 'Data_Fim', 'Data_Programacao', 'Equipe', 'valor_inicial', 'valor_final']
+    fields = ['Projeto', 'Nota', 'Status', 'Descricao', 'Local', 'Data_Inicio', 'Data_Fim', 'Data_Programacao', 'evidencia_execucao', 'Equipe', 'Mes_servico', 'ano_servico', 'valor_inicial', 'valor_final']
     success_url = reverse_lazy('visualizar_servicos')
 
 
@@ -84,6 +86,8 @@ class servico_lista(ListView):
 def filtrtrarunitario(request):
     tudo = Servico.objects.all()
     unitario=filtar_servico(request.GET, tudo)
-    form.save()
     return render(request, 'cadastrar_servico.html', {'tudo':unitario.qs, 'filter':unitario})
 
+def somarvalores(request):
+    somar = Servico.objects.all().aggregate(somasdosvaldores=Sum('valor_inicial'))
+    return render(request, 'base.html', {'somar':somar})

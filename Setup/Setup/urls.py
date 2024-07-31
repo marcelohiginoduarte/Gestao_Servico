@@ -29,7 +29,7 @@ urlpatterns = [
     path('visualizar/equipe/', views.visualizar_equipes, name='visualiazarequipes'),
     path('visualizar_medicao', views.visualizar_medicao, name='visualizarmedicao'),
     
-    path('atualizarservico/<int:pk>/', views.fazer_update.as_view(), name='fazer_update'),
+    path('editar/servico/<int:pk>/', views.fazer_update.as_view(), name='editarservico'),
     path('atualizar/servico/', views.filtrtrarunitario, name='atualizarservico'),
     
 ]

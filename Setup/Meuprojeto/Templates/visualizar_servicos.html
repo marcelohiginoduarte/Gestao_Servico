@@ -21,9 +21,13 @@
       <th scope="col">Data Inicio</th>
       <th scope="col">Data Fim</th>
       <th scope="col">Data Programacao</th>
+      <th scope="col">Mes Servico</th>
+      <th scope="col">Ano servico</th>
       <th scope="col">Equipe</th>
       <th scope="col">valor inicial</th>
       <th scope="col">valor final</th>
+      <th scope="col">Editar </th>
+      <th scope="col">Remover</th>
     </tr>
   </thead>
   <tbody>
@@ -37,9 +41,13 @@
           <td>{{Servico.Data_Inicio}}</td>
           <td>{{Servico.Data_Fim}}</td>
           <td>{{Servico.Data_Programacao}}</td>
+          <td>{{Servico.Mes_servico}}</td>
+          <td>{{Servico.ano_servico}}</td>
           <td>{{Servico.Equipe}}</td>
           <td>R$ {{Servico.valor_inicial}}</td>
           <td>R${{Servico.valor_final}}</td>
+          <td><a href="{% url 'editarservico' pk=Servico.id %}">Editar</a></td>
+          <td><a href="#">Remover</a></td>
         </tr>
       {% endfor %}
   </tbody>

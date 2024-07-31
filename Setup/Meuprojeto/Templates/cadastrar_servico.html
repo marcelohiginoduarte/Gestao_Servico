@@ -9,28 +9,30 @@
     {{ filter.form.as_p }}
     <button type="submit">Buscar</button>
   </form>
-
+  <label for="projeto"> 
       <form action="atualizarservico" method="post">
         {% for servico in tudo %}
-        <label for="projeto"> Projeto</label><br>
+        <br><label for="projeto"> Projeto</label>
         <input type="text" value="{{servico.Projeto}}">
         <label for="projeto"> Nota</label>
-        <input type="text" value="{{servico.Nota}}">
-        <label for="projeto"> status</label><br>
+        <input type="text" value="{{servico.Nota}}"><br><hr>
+        <label for="projeto"> status</label>
         <input type="text" value="{{servico.Status}}">
-        <label for="projeto"> Descricao</label><br>
-        <input type="text" value="{{servico.Descricao}}">
+        <label for="projeto"> Descricao</label>
+        <input type="text" value="{{servico.Descricao}}"><br><hr>
         <label for="projeto"> Local</label>
         <input type="text" value="{{servico.Local}}">
-        <label for="projeto"> status</label><br>
+        <label for="projeto"> status</label>
+        <input type="text" value="{{servico.Status}}"><br><hr>
+        <label for="projeto"> Data Inicio</label>
         <input type="text" value="{{servico.Data_Inicio}}">
         <label for="projeto"> Data_Fim</label>
-        <input type="text" value="{{servico.Data_Fim}}">
-        <label for="projeto"> Data_Programacao</label><br>
+        <input type="text" value="{{servico.Data_Fim}}"><br><hr>
+        <label for="projeto"> Data_Programacao</label>
         <input type="text" value="{{servico.Data_Programacao}}">
-        <label for="projeto"> Equipe</label><br>
-        <input type="text" value="{{servico.Equipe}}">
-        <label for="projeto"> valor_inicial</label><br>
+        <label for="projeto"> Equipe</label>
+        <input type="text" value="{{servico.Equipe}}"><br><hr>
+        <label for="projeto"> valor_inicial</label>
         <input type="text" value="{{servico.valor_inicial}}">
         <label for="projeto"> valor_final</label>
         <input type="text" value="{{servico.valor_final}}">

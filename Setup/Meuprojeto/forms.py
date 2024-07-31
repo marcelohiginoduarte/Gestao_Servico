@@ -4,7 +4,7 @@ from Meuprojeto.models import Servico, Equipe
 class ServicoForm(forms.ModelForm):
     class Meta:
         model = Servico
-        fields = ['Projeto', 'Nota', 'Status', 'Descricao', 'Local', 'Data_Inicio', 'Data_Fim', 'Data_Programacao', 'Equipe', 'evidencia_execucao' ,  'valor_inicial', 'valor_final']
+        fields = ['Projeto', 'Nota', 'Status', 'Descricao', 'Local', 'Data_Inicio', 'Data_Fim', 'Data_Programacao', 'Equipe', 'evidencia_execucao' , 'Mes_servico', 'ano_servico' ,  'valor_inicial', 'valor_final']
 
 class EquipeForm(forms.ModelForm):
     class Meta:

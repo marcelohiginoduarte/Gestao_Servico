@@ -8,6 +8,8 @@ class filtar_servico(django_filters.FilterSet):
         fields ={
             "Projeto":["icontains"],
             "Status":["icontains"],
+            "Mes_servico":["icontains"],
+            "ano_servico":["icontains"],
         }
 
 class filtar_medicao(django_filters.FilterSet):
